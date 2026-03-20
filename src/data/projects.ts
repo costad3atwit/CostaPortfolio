@@ -20,7 +20,7 @@ export const projects: Project[] = [
     description:
       'An interactive ArcGIS StoryMap exploring geographic and social data patterns. Combines spatial analysis with narrative storytelling to communicate data-driven insights.',
     tags: ['GIS', 'ArcGIS', 'Data Visualization', 'StoryMap'],
-    externalUrl: 'https://placeholder-storymap-url.com',
+    externalUrl: 'https://storymaps.arcgis.com/stories/f2d58e70909c4046ae7d3391c03886bc',
     status: 'complete',
   },
   {
