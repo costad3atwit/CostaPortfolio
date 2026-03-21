@@ -11,7 +11,7 @@ export default function Projects() {
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-bold mb-2" style={{ color: '#1A3263' }}>Projects</h1>
         <p className="text-base mb-10" style={{ color: '#547792' }}>
-          A collection of academic and personal projects spanning data science, machine learning, and full-stack development.
+          A collection of my academic and personal projects spanning data science, machine learning, and full-stack development.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
