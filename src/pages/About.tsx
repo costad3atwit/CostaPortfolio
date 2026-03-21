@@ -12,39 +12,43 @@ const SECTION_NAV = [
 
 const SKILLS = {
   Frontend: ['React', 'Angular 15', 'TypeScript', 'JavaScript', 'HTML/CSS', 'Bootstrap', 'AG Grid'],
-  Backend: ['Node.js', 'Express.js', 'FastAPI'],
-  'Databases': ['MongoDB', 'SQL'],
-  'ML / Data': ['Python', 'scikit-learn', 'NumPy', 'Pandas', 'PySpark', 'R'],
-  'Cloud / DevOps': ['AWS S3', 'CloudFront', 'Elastic Beanstalk', 'EC2', 'Docker'],
-  Tools: ['Git', 'VS Code', 'Postman', 'MATLAB'],
+  'ML / Data Science': ['scikit-learn', 'NumPy', 'Pandas', 'PySpark', 'R', 'NetworkX', 'BioWordVec'],
+  Backend: ['Node.js', 'Express.js', 'Python', 'FastAPI'],
+  'Cloud / DevOps': ['AWS S3', 'CloudFront', 'Elastic Beanstalk', 'EC2', 'ACM'],
+  Databases: ['MongoDB', 'PostgreSQL', 'SQL'],
+  Tools: ['Git', 'VS Code', 'MATLAB', 'Jupyter'],
+  Learning: ['Spring Boot', 'Docker', 'Java', 'PostgreSQL'],
 };
 
 const EXPERIENCES = [
   {
-    role: 'Full Stack Developer Co-op',
+    role: 'Full Stack Application Developer Co-op',
     company: 'Diamond Diagnostics',
-    period: '2026',
+    period: 'Jan 2026 – Present',
     bullets: [
-      'Built and maintained features in an Angular 15 / Express.js / Node.js / MongoDB stack',
-      'Deployed and managed services on AWS Elastic Beanstalk',
-      'Collaborated with cross-functional teams to deliver medical device software',
+      'Develop and maintain features on a production MEAN stack application serving medical diagnostics workflows',
+      'Translated complex financial reporting logic from JavaScript to TypeScript and implemented responsive design across multiple application views',
+      'Built MongoDB aggregation queries in JavaScript executed via Mongoose, and performed manual data correction and inspection using Studio 3T',
+      'Configured and managed AWS Elastic Beanstalk environments including autoscaling policies for off-peak cost reduction',
+      'Implemented AG Grid enterprise data grid features for large-scale tabular data display',
     ],
-    tags: ['Angular 15', 'Express.js', 'Node.js', 'MongoDB', 'AWS'],
+    tags: ['Angular 15', 'TypeScript', 'Express.js', 'Node.js', 'MongoDB', 'AWS'],
   },
   {
     role: 'Pharmacy Research Analyst',
     company: 'Mass General Brigham',
-    period: '2025',
+    period: 'May 2025 – Dec 2025',
     bullets: [
-      'Conducted genome-wide association studies (GWAS) and Mendelian randomization analyses',
+      'Performed Mendelian randomization mediation analyses in R to investigate causal relationships between biomarkers and cardiovascular outcomes across 48,000+ patient records',
       'Processed large-scale genomic datasets using PySpark on distributed compute clusters',
-      'Contributed to research on pharmacogenomics and drug-gene interaction phenotypes',
+      'Applied GWAS methodology to examine associations between GP73, hyperglycemic traits, and heart failure',
+      'Used tools including ieugwasr, biomaRt, and openxlsx for data retrieval, annotation, and reporting',
     ],
-    tags: ['PySpark', 'Python', 'R', 'GWAS', 'Bioinformatics'],
+    tags: ['PySpark', 'Python', 'R', 'GWAS', 'Mendelian Randomization', 'Bioinformatics'],
   },
 ];
 
-const S3_RESUME = `${S3_BASE}/DavidCostaResume_2_19_26.pdf`;
+const S3_RESUME = `${S3_BASE}/files/DavidCostaResume_2_19_26.pdf`;
 
 export default function About() {
   const location = useLocation();
@@ -103,23 +107,23 @@ export default function About() {
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto px-6 pb-24 space-y-24 pt-8">
+      <div className="max-w-3xl mx-auto px-6 pb-[50vh] space-y-24 pt-8">
 
         {/* Overview */}
         <section id="overview" ref={(el) => { sectionRefs.current['overview'] = el; }}>
           <h2 className="text-3xl font-bold mb-6" style={{ color: '#1A3263' }}>About Me</h2>
           <div className="rounded-2xl p-8 shadow-sm" style={{ backgroundColor: 'white' }}>
             <p className="text-base leading-relaxed mb-4" style={{ color: '#1A3263' }}>
-              Hi, I'm David — a software engineering student at Wentworth Institute of Technology with a passion for
-              building full-stack applications and applying machine learning to real-world problems.
+              Hi there! I'm David, a computer science student at Wentworth Institute of Technology with minors in Data Science and Applied Mathematics, on track to graduate in August 2026.
             </p>
             <p className="text-base leading-relaxed mb-4" style={{ color: '#1A3263' }}>
-              I've worked as a Full Stack Developer Co-op at Diamond Diagnostics and as a Pharmacy Research Analyst
-              at Mass General Brigham, where I applied data science techniques to genomics research.
+              I'm passionate about building full-stack applications, applying machine learning to real-world problems, gaming, and rock climbing (so if you're ever looking for a belay buddy, let me know)!
+            </p>
+            <p className="text-base leading-relaxed mb-4" style={{ color: '#1A3263' }}>
+              I've worked as a Full Stack Application Developer Co-Op at Diamond Diagnostics, building features on a production MEAN stack Enterprise Resource Planning application, and as a Pharmacy Research Analyst at Mass General Brigham, where I applied data science techniques to large-scale genomics research. Both experiences have shaped how I think about writing software that actually matters.
             </p>
             <p className="text-base leading-relaxed" style={{ color: '#1A3263' }}>
-              I'm currently seeking co-op and full-time opportunities in software engineering and data science.
-              Outside of coding I'm an avid rock climber — which inspired one of my current side projects.
+              After graduation, I plan to continue into a master's degree in computing while keeping one foot in industry because I think the best engineers never really stop learning on the job. For now, I'm actively seeking co-op and full-time opportunities in software engineering and data science.
             </p>
           </div>
         </section>
