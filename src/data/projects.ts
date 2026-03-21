@@ -25,14 +25,14 @@ export const projects: Project[] = [
     status: 'complete',
   },
   {
-    id: 'climbing-tracker',
-    title: 'Climbing Training Tracker',
-    subtitle: 'Senior Capstone Project',
+    id: 'portfolio',
+    title: 'Personal Portfolio',
+    subtitle: 'david-costa.com',
     description:
-      `A web application designed to help climbers track their training progress, set goals, and analyze performance over time. Built with Angular for the frontend and Spring Boot for the backend, it will feature user authentication, workout logging, and data visualization of climbing/exertion metrics.`,
-    tags: ['Angular', 'Spring Boot', 'Python', 'Machine Learning', 'PostgreSQL'],
-    githubUrl: 'https://github.com/costad3atwit/climbing-tracker',
-    status: 'in-progress',
+      'The site you\'re on right now! Built with React, TypeScript, and Vite, featuring a component-driven architecture with React Router for navigation. Styled with Tailwind CSS and enhanced with ReactBits UI components. Hosted on AWS S3 with CloudFront as a CDN for global delivery over HTTPS, with DNS managed through Cloudflare and SSL via ACM. Deployed via a custom CLI alias that builds and syncs to S3 in one command.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'AWS S3', 'CloudFront'],
+    externalUrl: 'https://david-costa.com',
+    status: 'complete',
   },
   {
     id: 'ml-fundamentals',
@@ -68,13 +68,23 @@ export const projects: Project[] = [
     status: 'complete',
   },
   {
-    id: 'gis-social-sciences',
-    title: 'GIS for Social Sciences',
-    subtitle: 'ArcGIS StoryMap',
+    id: 'gis-storymap',
+    title: 'Room with a View, City without Homes',
+    subtitle: 'GIS for Social Sciences Final Project',
     description:
-      'An interactive ArcGIS StoryMap exploring geographic and social data patterns. Combines spatial analysis with narrative storytelling to communicate data-driven insights.',
-    tags: ['GIS', 'ArcGIS', 'Data Visualization', 'StoryMap'],
+      'An ArcGIS StoryMap investigating how short-term rental platforms like Airbnb are contributing to housing affordability challenges in Boston. Sourced and analyzed census tract data, Inside Airbnb listings, and academic research to build a data-driven narrative connecting Airbnb density to rising rents, declining owner occupancy, and home value appreciation across Boston neighborhoods. Features multiple interactive geospatial visualizations built in ArcGIS.',
+    tags: ['ArcGIS', 'GIS', 'Data Analysis', 'Urban Planning'],
     externalUrl: 'https://storymaps.arcgis.com/stories/f2d58e70909c4046ae7d3391c03886bc',
     status: 'complete',
+  },
+  {
+    id: 'climbing-tracker',
+    title: 'Climbing Training Tracker',
+    subtitle: 'Senior Capstone Project',
+    description:
+      `A web application designed to help climbers track their training progress, set goals, and analyze performance over time. Built with Angular for the frontend and Spring Boot for the backend, it will feature user authentication, workout logging, and data visualization of climbing/exertion metrics.`,
+    tags: ['Angular', 'Spring Boot', 'Python', 'PostgreSQL', 'Machine Learning', ],
+    githubUrl: 'https://github.com/costad3atwit/climbing-tracker',
+    status: 'in-progress',
   },
 ];
