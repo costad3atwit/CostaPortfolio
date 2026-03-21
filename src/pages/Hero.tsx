@@ -5,7 +5,7 @@ import { S3_BASE } from '../config';
 
 
 const PHOTO_ITEMS = [
-  { src: `${S3_BASE}/files/DSCF4109.JPG.JPEG`, label: 'Group Coding' },
+  { src: `${S3_BASE}/files/DSCF4109.JPG.jpg`, label: 'Group Coding' },
   { src: `${S3_BASE}/files/bwh.JPG`, label: 'Brigham and Women\'s Hospital' },
   { src: `${S3_BASE}/files/dd_logo_white_2020_1919.webp`, label: 'Diamond Diagnostics', bg: '#0b225d', contain: true },
   { src: `${S3_BASE}/files/climb.jpg`, label: 'Climbing!', position: 'center 41%' },
