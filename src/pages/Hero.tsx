@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import TextType from '../components/TextType';
 import ScrollStack, { ScrollStackItem } from '../components/ScrollStack';
+import { S3_BASE } from '../config';
 
-// Placeholder items — swap src values with your S3 URLs when ready
+
 const PHOTO_ITEMS = [
-  { src: 'https://picsum.photos/seed/11/1200/500', label: 'Photo 1' },
-  { src: 'Diamond logo long.png', label: 'Photo 2' },
-  { src: 'bwh mgb logo.jpg', label: 'Photo 3' },
+  { src: `${S3_BASE}/DSCF4109.JPG.JPEG`, label: 'Photo 1' },
+  { src: `${S3_BASE}/bwh.JPG`, label: 'Photo 2' },
+  { src: `${S3_BASE}/Diamond logo long.png`, label: 'Photo 3' },
   { src: 'https://picsum.photos/seed/44/1200/500', label: 'Photo 4' },
 ];
 
