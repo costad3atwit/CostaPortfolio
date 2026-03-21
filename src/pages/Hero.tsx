@@ -5,8 +5,8 @@ import ScrollStack, { ScrollStackItem } from '../components/ScrollStack';
 // Placeholder items — swap src values with your S3 URLs when ready
 const PHOTO_ITEMS = [
   { src: 'https://picsum.photos/seed/11/1200/500', label: 'Photo 1' },
-  { src: 'https://picsum.photos/seed/22/1200/500', label: 'Photo 2' },
-  { src: 'https://picsum.photos/seed/33/1200/500', label: 'Photo 3' },
+  { src: 'Diamond logo long.png', label: 'Photo 2' },
+  { src: 'bwh mgb logo.jpg', label: 'Photo 3' },
   { src: 'https://picsum.photos/seed/44/1200/500', label: 'Photo 4' },
 ];
 
@@ -15,7 +15,7 @@ export default function Hero() {
     <>
       {/* Hero */}
       <section
-        className="h-[78vh] flex flex-col items-center justify-center px-6 text-center"
+        className="min-h-[78vh] flex flex-col items-center justify-start pt-12 px-6 text-center"
         style={{ backgroundColor: '#E8E2DB' }}
       >
         {/* Name */}

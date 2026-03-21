@@ -9,6 +9,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Nav />
+      <main className="pt-16">
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/projects/:id" element={<ProjectDetail />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      </main>
     </BrowserRouter>
   );
 }
