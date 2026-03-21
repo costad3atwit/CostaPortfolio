@@ -41,7 +41,7 @@ export const projects: Project[] = [
     description:
       'A comprehensive machine learning project which demonstrated understanding of core ML algorithms on a fictional household features/expenses dataset. Techniques included hierarchical clustering, linear/logistic regression, Decision Tree, Random Forest, Support Vector Machine, and model evaluation techniques using R.',
     tags: ['R',  'Machine Learning'],
-    pdfUrl: `${S3_BASE}/MachineLearningFinal.pdf`,
+    pdfUrl: `${S3_BASE}/files/MachineLearningFinal.pdf`,
     githubUrl: 'https://github.com/costad3atwit/Machine_Learning_Final',
     status: 'complete',
   },
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     description:
       "A research project analyzing Alzheimer's disease progression using the OASIS-3 neuroimaging dataset across 1,378 participants. Applied Decision Tree classification with cost-complexity pruning to achieve 92.4% accuracy in predicting cognitive status, and PAM clustering with Gower distance to identify distinct patient subgroups. Built with Python using scikit-learn, pandas, and seaborn.",
     tags: ['Python', 'scikit-learn', 'Pandas', 'Data Science', 'Healthcare'],
-    pdfUrl: `${S3_BASE}/Multimodal Predictive Analytics of Alzheimer's Disease Progression - David Costa.pdf`,
+    pdfUrl: `${S3_BASE}/files/Multimodal Predictive Analytics of Alzheimer's Disease Progression - David Costa.pdf`,
     githubUrl: 'https://github.com/costad3atwit/Alzheimer-s-Neuroimaging-Analysis',
     status: 'complete',
   },
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     description:
       'A data mining project that built a drug-disease association network by mining 260,000+ biomedical abstracts from PubMed (2015-2025). Used Aho-Corasick pattern matching with MeSH descriptors to detect 12.4M co-mentions, BioWordVec embeddings with agglomerative clustering for synonym resolution, and NetworkX to construct a bipartite graph of 5,135 nodes and 125,664 evidence-based edges. Built with Python.',
     tags: ['Python', 'Data Mining', 'Pattern Recognition', 'scikit-learn'],
-    pdfUrl: `${S3_BASE}/Data Mining Project Poster.pdf`,
+    pdfUrl: `${S3_BASE}/files/Data Mining Project Poster.pdf`,
     githubUrl: 'https://github.com/costad3atwit/PubMed_Graph_Analysis',
     status: 'complete',
   },

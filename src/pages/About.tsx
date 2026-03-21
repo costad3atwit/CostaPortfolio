@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import PdfModal from '../components/PdfModal';
 import { S3_BASE } from '../config';
+import { experiences } from '../data/about';
 
 const SECTION_NAV = [
   { label: 'Overview', hash: 'overview' },
@@ -20,34 +21,6 @@ const SKILLS = {
   Learning: ['Spring Boot', 'Docker', 'Java', 'PostgreSQL'],
 };
 
-const EXPERIENCES = [
-  {
-    role: 'Full Stack Application Developer Co-op',
-    company: 'Diamond Diagnostics',
-    period: 'Jan 2026 – Present',
-    bullets: [
-      'Develop and maintain features on a production MEAN stack application serving medical diagnostics workflows',
-      'Translated complex financial reporting logic from JavaScript to TypeScript and implemented responsive design across multiple application views',
-      'Built MongoDB aggregation queries in JavaScript executed via Mongoose, and performed manual data correction and inspection using Studio 3T',
-      'Configured and managed AWS Elastic Beanstalk environments including autoscaling policies for off-peak cost reduction',
-      'Implemented AG Grid enterprise data grid features for large-scale tabular data display',
-    ],
-    tags: ['Angular 15', 'TypeScript', 'Express.js', 'Node.js', 'MongoDB', 'AWS'],
-  },
-  {
-    role: 'Pharmacy Research Analyst',
-    company: 'Mass General Brigham',
-    period: 'May 2025 – Dec 2025',
-    bullets: [
-      'Performed Mendelian randomization mediation analyses in R to investigate causal relationships between biomarkers and cardiovascular outcomes across 48,000+ patient records',
-      'Processed large-scale genomic datasets using PySpark on distributed compute clusters',
-      'Applied GWAS methodology to examine associations between GP73, hyperglycemic traits, and heart failure',
-      'Used tools including ieugwasr, biomaRt, and openxlsx for data retrieval, annotation, and reporting',
-    ],
-    tags: ['PySpark', 'Python', 'R', 'GWAS', 'Mendelian Randomization', 'Bioinformatics'],
-  },
-];
-
 const S3_RESUME = `${S3_BASE}/files/DavidCostaResume_2_19_26.pdf`;
 
 export default function About() {
@@ -56,7 +29,6 @@ export default function About() {
   const [pdfOpen, setPdfOpen] = useState(false);
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
-  // Scroll to hash on mount / hash change
   useEffect(() => {
     const hash = location.hash.replace('#', '');
     if (hash) {
@@ -157,7 +129,7 @@ export default function About() {
         <section id="experience" ref={(el) => { sectionRefs.current['experience'] = el; }}>
           <h2 className="text-3xl font-bold mb-6" style={{ color: '#1A3263' }}>Experience</h2>
           <div className="space-y-4">
-            {EXPERIENCES.map((exp) => (
+            {experiences.map((exp) => (
               <div key={exp.role} className="rounded-2xl p-6 shadow-sm" style={{ backgroundColor: 'white' }}>
                 <div className="flex items-start justify-between flex-wrap gap-2 mb-3">
                   <div>
@@ -184,6 +156,15 @@ export default function About() {
                       {tag}
                     </span>
                   ))}
+                </div >
+                <div className="flex flex-wrap gap-2 mt-2">  
+                  {exp.externalUrl && (
+                  <a href={exp.externalUrl} target="_blank" rel="noreferrer"
+                    className="text-xs font-semibold px-3 py-1.5 rounded-full transition-all hover:opacity-90"
+                    style={{ backgroundColor: '#547792', color: '#E8E2DB' }}>
+                    Live Site ↗
+                  </a>
+                  )}
                 </div>
               </div>
             ))}

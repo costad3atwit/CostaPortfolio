@@ -5,10 +5,10 @@ import { S3_BASE } from '../config';
 
 
 const PHOTO_ITEMS = [
-  { src: `${S3_BASE}/DSCF4109.JPG.JPEG`, label: 'Photo 1' },
-  { src: `${S3_BASE}/bwh.JPG`, label: 'Photo 2' },
-  { src: `${S3_BASE}/Diamond logo long.png`, label: 'Photo 3' },
-  { src: 'https://picsum.photos/seed/44/1200/500', label: 'Photo 4' },
+  { src: `${S3_BASE}/files/DSCF4109.JPG.JPEG`, label: 'Group Coding' },
+  { src: `${S3_BASE}/files/bwh.JPG`, label: 'Brigham and Women\'s Hospital' },
+  { src: `${S3_BASE}/files/dd_logo_white_2020_1919.webp`, label: 'Diamond Diagnostics', bg: '#0b225d', contain: true },
+  { src: `${S3_BASE}/files/climb.jpg`, label: 'Climbing!', position: 'center 41%' },
 ];
 
 export default function Hero() {
@@ -66,10 +66,12 @@ export default function Hero() {
         <ScrollStack useWindowScroll itemDistance={80} baseScale={0.88} itemStackDistance={25}>
           {PHOTO_ITEMS.map((item) => (
             <ScrollStackItem key={item.label} itemClassName="overflow-hidden !p-0">
+              {item.bg && <div className="absolute inset-0 rounded-[40px]" style={{ backgroundColor: item.bg }} />}
               <img
                 src={item.src}
                 alt={item.label}
-                className="absolute inset-0 w-full h-full object-cover rounded-[40px]"
+                className={`absolute rounded-[40px] ${item.contain ? 'inset-6 w-[calc(100%-3rem)] h-[calc(100%-3rem)] object-contain' : 'inset-0 w-full h-full object-cover'}`}
+                style={item.position ? { objectPosition: item.position } : undefined}
               />
             </ScrollStackItem>
           ))}
