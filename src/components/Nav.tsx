@@ -13,6 +13,13 @@ export default function Nav() {
   const [pillStyle, setPillStyle] = useState({ left: 0, width: 0 });
   const itemRefs = useRef<(HTMLAnchorElement | null)[]>([]);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  function handleCopyEmail() {
+    navigator.clipboard.writeText(CONTACT.email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }
 
   useEffect(() => {
     const activeIndex = NAV_ITEMS.findIndex((item) =>
@@ -32,12 +39,12 @@ export default function Nav() {
 
   const socialLinks = (
     <>
-      <a href={`mailto:${CONTACT.email}`} title="Email"
+      <button onClick={handleCopyEmail} title="Copy email"
         className="text-[#E8E2DB] hover:text-[#FAB95B] transition-colors">
         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
-      </a>
+      </button>
       <a href={CONTACT.linkedin} target="_blank" rel="noreferrer" title="LinkedIn"
         className="text-[#E8E2DB] hover:text-[#FAB95B] transition-colors">
         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -55,6 +62,12 @@ export default function Nav() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: '#1A3263' }}>
+      {copied && (
+        <div className="absolute top-16 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full text-sm font-medium shadow-lg pointer-events-none"
+          style={{ backgroundColor: '#22c55e', color: '#fff' }}>
+          Email Copied!
+        </div>
+      )}
       <div className="flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <NavLink to="/" className="text-[#E8E2DB] font-semibold text-lg tracking-wide hover:text-[#FAB95B] transition-colors">
