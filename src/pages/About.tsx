@@ -21,7 +21,7 @@ const SKILLS = {
   Learning: ['Spring Boot', 'Docker', 'Java', 'PostgreSQL'],
 };
 
-const S3_RESUME = `${S3_BASE}/files/DavidCostaResume_2_19_26.pdf`;
+const S3_RESUME = `${S3_BASE}/files/DavidCostaResume_3_20_26.pdf`;
 
 export default function About() {
   const location = useLocation();
@@ -178,7 +178,7 @@ export default function About() {
             style={{ backgroundColor: 'white' }}>
             <div className="flex-1">
               <p className="text-base mb-1 font-medium" style={{ color: '#1A3263' }}>David Costa — Resume</p>
-              <p className="text-sm" style={{ color: '#547792' }}>Updated February 2026</p>
+              <p className="text-sm" style={{ color: '#547792' }}>Updated March 2026</p>
             </div>
             <div className="flex gap-3">
               <button
