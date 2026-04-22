@@ -30,7 +30,7 @@ export default function PdfModal({ url, title, onClose }: PdfModalProps) {
           </button>
         </div>
         <iframe
-          src={url}
+          src={`https://docs.google.com/viewer?url=${encodeURIComponent(url)}&embedded=true`}
           title={title}
           className="flex-1 w-full border-0"
         />
